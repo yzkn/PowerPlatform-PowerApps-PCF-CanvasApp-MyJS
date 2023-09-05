@@ -1,5 +1,7 @@
 # MyJS
 
+Power Apps キャンバスアプリに JavaScript コードを埋め込むためのコードコンポーネント
+
 ---
 
 ## Original
