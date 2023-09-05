@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="Develop1" constructor="MyJs" version="0.0.1" display-name-key="MyJs" description-key="MyJs description" control-type="standard">
+  <control namespace="YA" constructor="MyJs" version="0.0.1" display-name-key="MyJs" description-key="MyJs description" control-type="standard">
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
     <type-group name="types">
         <type>SingleLine.Text</type>
