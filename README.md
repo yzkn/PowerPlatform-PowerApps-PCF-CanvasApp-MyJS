@@ -34,11 +34,11 @@ pac solution add-reference --path ..\
 マネージドソリューションとして作成する場合は以下のコメントを解除
 
 ```xml
-  <!-- Solution Packager overrides, un-comment to use: SolutionPackagerType (Managed, Unmanaged, Both)
+  <!-- Solution Packager overrides, un-comment to use: SolutionPackagerType (Managed, Unmanaged, Both) -->
   <PropertyGroup>
     <SolutionPackageType>Managed</SolutionPackageType>
   </PropertyGroup>
-  -->
+  <!-- -->
 ```
 
 powershell```
