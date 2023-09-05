@@ -9,13 +9,6 @@ export class MyJs implements ComponentFramework.StandardControl<IInputs, IOutput
 	notifyOutputChanged: () => void;
 
 	/**
-	 * Empty constructor.
-	 */
-	constructor() {
-
-	}
-
-	/**
 	 * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
 	 * Data-set values are not initialized here, use updateView.
 	 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
@@ -39,15 +32,15 @@ export class MyJs implements ComponentFramework.StandardControl<IInputs, IOutput
 
 		debug = `Debug:\n${new Date().toLocaleTimeString()}\n${JSON.stringify({
 			in1: context.parameters.inArgument1,
-			in2: context.parameters.inArgument1
+			in2: context.parameters.inArgument2
 		}
 		)}`;
 
 		// Execute the JS Code
 		try {
 
-			var pcfCode = Function(context.parameters.jscode.raw as string);
-			var output = pcfCode(context.parameters.inArgument1.raw, context.parameters.inArgument2.raw);
+			const pcfCode = Function(context.parameters.jscode.raw as string);
+			const output = pcfCode(context.parameters.inArgument1.raw, context.parameters.inArgument2.raw);
 
 			// Set the outputs
 			if (output.out1) {
@@ -57,7 +50,7 @@ export class MyJs implements ComponentFramework.StandardControl<IInputs, IOutput
 				this.outputs.outArgument2 = output.out2;
 			}
 		}
-		catch (ex) {
+		catch (ex: any) {
 			debug = `Error:${ex.message}\n${debug}`;
 		}
 
@@ -80,6 +73,6 @@ export class MyJs implements ComponentFramework.StandardControl<IInputs, IOutput
 	 * i.e. cancelling any pending remote calls, removing listeners, etc.
 	 */
 	public destroy(): void {
-
+		console.debug("MyJs:destroy");
 	}
 }

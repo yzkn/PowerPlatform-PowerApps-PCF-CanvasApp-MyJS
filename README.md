@@ -1,8 +1,11 @@
 # MyJS
 
-Power Apps キャンバスアプリに JavaScript コードを埋め込むためのコードコンポーネント
-
 ---
+
+## Original
+
+- [scottdurow/Canvas-App-Samples](https://github.com/scottdurow/Canvas-App-Samples)
+  - [pcfjs](https://github.com/scottdurow/Canvas-App-Samples/tree/master/PCF/pcfjs)
 
 ---
 
